@@ -1,0 +1,258 @@
+html {
+  scroll-behavior: smooth;
+}
+body{
+  background: #ccc;
+  color: #fff;
+  font-family: 'Courier New',sans-serif;
+  font-size:16px;
+  font-weight:bold;
+  margin: 0;
+}
+#loader {
+  position: absolute;
+  width: 100%;
+  /* height:100vh; viewprotの100%なのででスクロールした後リロードするとロード画面が切れる*/
+  height: 2800px;
+  background-color: #069b96;
+  z-index: 1;/*menuが先に出ないように*/
+}
+/* 読み込み完了後に「loaded」を付与する */
+#loader.loaded {
+  animation: fadeOut 3s forwards;
+}
+.sk-cube-grid {
+  width: 40px;
+  height: 40px;
+  padding-top: 200px;
+  /* margin-topが効かないのでpaddingで距離をとった */
+  margin: 100px auto;
+}
+
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: #333;
+  float: left;
+  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+          animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+}
+.sk-cube-grid .sk-cube1 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube2 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube3 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s; }
+.sk-cube-grid .sk-cube4 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube5 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube6 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube7 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s; }
+.sk-cube-grid .sk-cube8 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube9 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1); 
+  }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  } 
+}
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      display: none;
+      opacity: 0;
+      z-index: -1;
+  }
+}
+
+
+.menu{
+  margin-top: 0;
+}
+.menu ul{
+  background: black;
+  position: fixed;
+  display: flex;
+  list-style: none;
+  margin: auto;
+  padding: 0 10px;
+  height: 38.4px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.menu li{
+  width: 100px;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+}
+.menu li:hover{
+  background: rgb(66, 65, 65);
+}
+.menu a{
+  color: #fff;
+  text-decoration: none;
+}
+.menu .active{
+  text-decoration: line-through;
+}
+
+
+.home{
+  font-size: 20px;
+  background: rgb(1, 1, 71);
+  padding: 200px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0;
+}
+.home h1{
+  text-align: center;
+  font-size: 50px;
+}
+.home img{
+  width: 400px;
+  margin-left: 200px;
+}
+
+
+.about{
+  background: rgb(2, 2, 129);
+  padding: 100px;
+  margin-top: 10px;
+}
+.about h1{
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 100px;
+}
+.aboutDetails{
+  display: flex;
+  justify-content: center;
+}
+.about section{
+  width: 350px;
+  /* margin:0px,15px; */
+  margin-left:15px;
+  margin-right:15px;
+}
+.about section p{
+  background: rgb(89, 145, 104);
+  border-radius: 8px;
+  padding: 3px;
+}
+
+.game{
+  background: rgb(41, 41, 182);
+  padding: 100px;
+  margin-top: 10px;
+  }
+.game h1{
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 50px;
+}
+.gamecontent{
+  display: flex;
+}
+.container2{
+  margin: 30px auto;
+  width: 500px;
+}
+.description{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.description li a{
+/*a要素のdisplayプロパティ値がデフォルトでinlineなのでwidthが効かない*/
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  padding: 8px 0;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px 4px 0 0;
+}
+.description li a.active{
+  background: #333;
+  color: #fff;
+}
+.description li a:not(.active):hover{
+  /* a要素の内、activeでないものにホバーした時 */
+  opacity: 0.5;
+  transition: opacity 0.4s;
+}
+.content.active{
+  background: #333;
+  color: #fff;
+  min-height: 150px;
+  padding: 12px;
+  display: block;
+}
+.content{
+  display: none;
+}
+
+
+
+.contact{
+  background: rgb(115, 115, 228);
+  text-align: center;
+  padding: 100px;
+  height: 300px;
+  /* float: center; なぜ効かない */
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.mailset{
+  /* right: 0; */
+  /* float: left; 意味がなかった*/
+  width: 500px;
+  /* display: flex; なぜテキストが広がる*/
+}
+#name{
+  margin-bottom: 10px;
+}
+#content{
+  width: 370px;
+  height: 100px;
+  margin-left: 0;
+}
+
+.footer{
+  text-align:center;
+}

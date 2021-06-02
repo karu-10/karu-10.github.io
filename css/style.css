@@ -1,0 +1,156 @@
+#description{
+  background: white;
+  color: black;
+  border-radius: 4px;
+  width: 550px;
+  margin: 0 auto;
+}
+
+#container{
+  margin:16px auto;
+}
+
+#sec{
+  width: 260px;
+  margin-left: -18px;
+  display: flex;
+  justify-content: center;
+}
+
+#backboard{
+  background: grey;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 8px;
+  padding: 0px;
+}
+
+#board{
+  margin: 0 0 8px;
+  padding: 15px;
+  border-radius: 8px;
+  background: honeydew;
+}
+
+#backboard li{
+  background: #00aaff;
+  width: 37px;
+  height: 37px;
+  margin: 5px;
+  border-radius: 4px;
+  line-height: 40px;
+  text-align: center;
+  box-shadow: 0 4px 0 #0088cc;
+  user-select: none;
+}
+
+#utap{
+  background: yellow;
+  color: black;
+  text-align: center;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  box-shadow: 0 4px 0 hsl(71, 90%, 41%);
+  cursor:pointer;
+  user-select:none;
+  position: relative;
+}
+#ltap{
+  background: yellow;
+  color: black;
+  padding-top: 100px;
+  border-radius: 4px;
+  margin-right: 5px;
+  box-shadow: 0 4px 0 hsl(71, 90%, 41%);
+  cursor:pointer;
+  user-select:none;
+}
+#rtap{
+  background: yellow;
+  color: black;
+  padding-top: 100px;
+  border-radius: 4px;
+  margin-left: 5px;
+  box-shadow: 0 4px 0 hsl(71, 90%, 41%);
+  cursor:pointer;
+  user-select:none;
+}
+#dtap{
+  background: yellow;
+  color: black;
+  text-align: center;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  box-shadow: 0 4px 0 hsl(71, 90%, 41%);
+  cursor:pointer;
+  user-select:none;
+  position: relative;
+}
+
+#score{
+  margin-top: 30px;
+  text-align: center;
+  background: white;
+  color: black;
+  border-color: black;
+}
+#btnli{
+  display: flex;
+  justify-content: center;
+}
+#btn1{
+  margin: 0 5px;
+  position: relative;
+  cursor:pointer;
+  user-select:none;
+  background: rgb(6, 133, 6);
+  padding: 8px;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 4px 0 hsl(108, 88%, 13%);
+}
+#btn2{
+  margin: 0 5px;
+  position: relative;
+  cursor:pointer;
+  user-select:none;
+  background: rgb(86, 204, 86);
+  padding: 8px;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 4px 0 hsl(108, 88%, 24%);
+}
+
+#board li.pressed{
+  background: #ccc;
+  box-shadow: none;
+  margin-top: 9px;
+  margin-bottom: 1px;
+}
+
+#btn1:active{
+  top: 4px;
+  box-shadow: none;
+}
+#btn2:active{
+  top: 4px;
+  box-shadow: none;
+}
+#utap:active{
+  top: 4px;
+  box-shadow: none;
+}
+#ltap:active{
+  margin-top: 4px;
+  box-shadow: none;
+}
+#rtap:active{
+  margin-top: 4px;
+  box-shadow: none;
+}
+#dtap:active{
+  top: 4px;
+  box-shadow: none;
+}
+

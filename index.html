@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>portfolio site</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style2.css">
+</head>
+
+<body>
+   <div id="loader">
+     <div class="sk-cube-grid">
+      <div class="sk-cube sk-cube1"></div>
+      <div class="sk-cube sk-cube2"></div>
+      <div class="sk-cube sk-cube3"></div>
+      <div class="sk-cube sk-cube4"></div>
+      <div class="sk-cube sk-cube5"></div>
+      <div class="sk-cube sk-cube6"></div>
+      <div class="sk-cube sk-cube7"></div>
+      <div class="sk-cube sk-cube8"></div>
+      <div class="sk-cube sk-cube9"></div>
+     </div>
+   </div>
+  
+    <header class="menu">
+      <ul>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Game">Game</a></li>
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
+    </header>
+
+    <a id="Home"></a>
+    <div class="home">  
+      <h1><i>My Portfolio</i></h1>
+      <img src="img/Sentiment analysis-rafiki.png">
+    </div>
+
+    <a id="About"></a>
+    <div class="about">
+      <h1><i>-Profile-</i></h1>
+       <div class="aboutDetails">
+        <section>
+          <h2>自己紹介</h2>
+          <p>齋藤光、22歳<br>
+            千葉県出身、成蹊大学理工学部情報科学科卒業<br>
+            趣味：読書、ゲーム、運動<br>
+            特技：どこでも寝れる<br>
+            アルバイト経験：飲食店、スキー場、宅配サービス<br>
+            就職活動中、プログラミング勉強中です
+          </p>
+
+        </section>
+        <section>
+          <h2>資格・経験</h2>
+          <p>保有資格：基本情報技術者、普通自動車免許</p>
+          <p>プログラミング経験：実務経験なし<br>
+            C++：3年 (大学の講義)<br>
+            Java：少しだけ(大学の講義)<br>
+            HTML,CSS,javascript：3ヶ月(独学)
+          </p>
+        </section>
+        <section>
+          <h2>自己PR</h2>
+          <p>エンジニアを目指して就職活動中です。
+            エンジニアになろうと思ったきっかけは大学でのプログラミングの講義です。
+            高校までは、プログラミングに触れたこともありませんでしたが、大学に入って初めてプログラミングに触れ、自分が書いたコードでプログラムが思い通りに動くことの楽しさを実感しました。また、今後必須の力とされるITに関して学び、関心を持ったので、IT業界に入り、社会に変化を与えるものに関わり、自分の成長に繋げたいと思いました。なので、持っているプログラミングやITの知識を少しでも使えるシステムエンジニアを目指しています。特に今はフロントエンドとバックエンドに興味を持っているので、これらに関係する言語の勉強中です。
+          </p>
+        </section>
+       </div>
+      </div>
+      
+    <a id="Game"></a>
+    <div class="game"> 
+      <h1>-MiniGame-</h1>
+      <div class="gamecontent">
+
+        <div id="container">
+          <div id="utap">⇧</div>
+          <section id="sec">
+            <diV id="ltap">⇦</diV>
+            <div id="board">
+              <ul id="backboard"></ul>
+            </div>
+            <diV id="rtap">⇨</diV>
+          </section>
+          <div id="dtap">⇩</div>
+          <div id="btnli">
+            <div id="btn1">START</div>
+            <div id="btn2">RESET</div>
+          </div>
+          <div id="score">0</div>
+        </div>
+      
+        <div class="container2">
+          <ul class="description">
+            <!--内容を切り替えるのでaタグを使うが、ページ遷移はしないので＃-->
+            <li><a href="#" class="active" data-id="about">概要</a></li>
+            <li><a href="#" data-id="rule">ルール</a></li>
+            <li><a href="#" data-id="contact">仕様</a></li>
+          </ul>
+          
+          <section class="content active" id="about">
+            まだ、サイトに載せられるよう技術や経歴は少なかったので
+            扱える範囲の技術でゲームを作りました。暇つぶしに遊んでください。
+          </section>
+          <section class="content" id="rule">
+            STARTを推してゲーム開始。
+            盤面のマスをボタンで動かしてより高いスコアを目指す。
+            盤面のマスが動かなくなったらゲームオーバーになる。
+          </section>
+          <section class="content" id="contact">
+            STARTボタンを押すとランダムな2マスに2又は4のマスを出す。
+            確率は3分の１で「4」、3分の2で「2」になっている。矢印ボタンを押すと全てのマスが矢印の方向に動く。マスが動くと空いているマスの中からランダムに新しいマスが現れる。
+            同じ数値同士のマスがぶつかると数値が足され1つのマスになる。
+            スコアは盤面のマスの合計値。
+          </section>
+         </div>
+        
+       </div>
+      
+    </div>
+      
+      <script src="js/main.js"></script>
+      <script src="js/main2.js"></script>
+      
+    
+    <a id="Contact"></a>  
+      <div class="contact">
+        <div class="mailset">
+          <h1>~ Contact me ~</h1>
+          <br>
+          <p>最後までご覧いただきありがとうございました。
+            このサイトに関してまたは私へのコメント、ご意見などがありましたら、下記フォームをご利用ください。
+          </p>
+          <form action="https://formspree.io/f/mqkwqkoj" method="POST">
+          <label>
+            Name
+            <input id="name" name="name" type="text" required>
+          </label>
+          <label>
+            e-mail
+            <input id="address" type="email" name="_replyto">
+          </label>
+          <label>
+            content<br>
+            <textarea id="content" name="message"></textarea>
+          </label>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer">
+        <h1>Tnak you coming!</h1>
+      </div>
+  </body>
+</html>
