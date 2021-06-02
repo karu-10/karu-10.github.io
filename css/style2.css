@@ -166,11 +166,18 @@ body{
   /* margin:0px,15px; */
   margin-left:15px;
   margin-right:15px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .3s, transform .3s;
 }
 .about section p{
   background: rgb(89, 145, 104);
   border-radius: 8px;
   padding: 3px;
+}
+section.appear{
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .game{
