@@ -15,7 +15,7 @@ body{
   /* height:100vh; viewprotの100%なのででスクロールした後リロードするとロード画面が切れる*/
   height: 2800px;
   background-color: #069b96;
-  z-index: 1;/*menuが先に出ないように*/
+  z-index: 2;/*menuが先に出ないように*/
 }
 /* 読み込み完了後に「loaded」を付与する */
 #loader.loaded {
@@ -110,12 +110,14 @@ body{
   left: 0;
   right: 0;
   text-align: center;
+  z-index: 1;
 }
 .menu li{
   width: 100px;
   cursor: pointer;
   user-select: none;
   padding: 10px;
+  /* height: 30px; */
 }
 .menu li:hover{
   background: rgb(66, 65, 65);
@@ -123,6 +125,7 @@ body{
 .menu a{
   color: #fff;
   text-decoration: none;
+  display: block;
 }
 .menu .active{
   text-decoration: line-through;
@@ -260,6 +263,8 @@ section.appear{
   margin-left: 0;
 }
 
-.footer{
+footer{
   text-align:center;
+  margin-top: 20px;
+  font-size: 40px;
 }
